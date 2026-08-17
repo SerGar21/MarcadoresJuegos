@@ -37,3 +37,12 @@ Después de que la web se haya cargado correctamente al menos una vez, el servic
 ## Datos de las partidas
 
 Las partidas se guardan en el almacenamiento local del navegador/dispositivo. No se envían a GitHub ni a Netlify. Si borras los datos de Safari o del sitio, se pueden perder las partidas guardadas.
+
+## Actualización actual
+
+- Corregido **Nueva partida** en los tres juegos.
+- Al iniciar una nueva partida se borran todas las rondas y los marcadores vuelven a **0**.
+- Se conservan los jugadores y la configuración de cada juego.
+- En **Los Cuadraditos** se conserva también el repartidor inicial.
+- La confirmación usa ahora una ventana propia de la aplicación para funcionar de forma fiable en iPad/PWA.
+- Incrementada la caché offline a `v3`.
