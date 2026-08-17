@@ -1,4 +1,4 @@
-const CACHE_NAME = 'marcador-juegos-v4';
+const CACHE_NAME = 'marcador-juegos-v7';
 const APP_SHELL = [
   './',
   './index.html',

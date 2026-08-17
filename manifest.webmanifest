@@ -1,7 +1,7 @@
 {
   "name": "Marcador de Juegos de Mesa",
   "short_name": "Marcador Juegos",
-  "description": "Marcador para Chinchón, Kharma y Los Cuadraditos.",
+  "description": "Marcador para Chinchón, Kharma, Los Cuadraditos y La Cuenta.",
   "lang": "es",
   "start_url": "./",
   "scope": "./",
