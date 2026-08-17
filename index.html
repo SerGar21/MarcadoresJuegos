@@ -122,6 +122,52 @@ body{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bot
   .cuad-table-mode .cuad-grid-table thead tr:first-child th:last-child{width:62px;min-width:62px;max-width:62px}
 }
 
+
+/* La Cuenta: marcador completo en pestaña independiente */
+.lc-table-mode .table-view .panel-body{padding:0}
+.la-cuenta-table-wrap{margin:0;border:0;border-radius:0;max-height:calc(100vh - 220px);overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;touch-action:pan-x pan-y}
+.la-cuenta-history-table{width:max-content;min-width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed}
+.la-cuenta-history-table th,.la-cuenta-history-table td{border-right:1px solid var(--border);border-bottom:1px solid var(--border);vertical-align:middle;white-space:normal}
+.la-cuenta-history-table thead th{position:sticky;top:0;z-index:6;background:#171c27;padding:10px 7px;font-size:10px;line-height:1.2}
+.la-cuenta-history-table .lc-account-head,.la-cuenta-history-table .lc-account-cell{position:sticky;left:0;z-index:4;width:78px;min-width:78px;max-width:78px;background:#171c27;text-align:left}
+.la-cuenta-history-table thead .lc-account-head{z-index:9}
+.la-cuenta-history-table .lc-detail-head,.la-cuenta-history-table .lc-detail-cell{position:sticky;left:78px;z-index:3;width:188px;min-width:188px;max-width:188px;background:#171c27;text-align:left}
+.la-cuenta-history-table thead .lc-detail-head{z-index:8}
+.la-cuenta-history-table .lc-player-head,.la-cuenta-history-table .lc-player-cell{width:132px;min-width:132px;max-width:132px}
+.la-cuenta-history-table .lc-player-head{overflow:hidden;text-overflow:ellipsis}
+.la-cuenta-history-table .lc-player-cell{padding:7px 6px;text-align:center;background:rgba(255,255,255,.01)}
+.la-cuenta-history-table .lc-player-cell.payer-cell{background:rgba(255,209,102,.07)}
+.la-cuenta-history-table .lc-player-cell.la-cuenta-owner-cell{box-shadow:inset 0 0 0 1px rgba(78,205,196,.25)}
+.lc-account-box{display:flex;min-height:64px;flex-direction:column;justify-content:center;gap:3px;padding:8px 7px}
+.lc-account-box strong{font-size:12px}.lc-account-box span{color:var(--muted);font-size:9px;line-height:1.25}
+.lc-detail-box{display:flex;min-height:64px;flex-direction:column;justify-content:center;gap:3px;padding:7px 8px}
+.lc-detail-box strong{font-size:11px;line-height:1.25}.lc-detail-box span{color:var(--muted);font-size:9px;line-height:1.3}
+.lc-delete-btn{align-self:flex-start;margin-top:3px;border:0;border-radius:7px;padding:4px 7px;background:rgba(255,107,107,.08);color:#ffb0b0;font-size:9px;font-weight:850}
+.lc-result-card{display:flex;min-height:64px;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:5px 3px;border-radius:10px;background:rgba(255,255,255,.035);border:1px solid var(--border);overflow:hidden}
+.lc-result-card.out{background:rgba(255,107,107,.07);border-color:rgba(255,107,107,.18)}
+.lc-result-card .lc-money{font-size:14px;font-weight:950;white-space:nowrap}
+.lc-result-card .lc-hand{color:var(--accent2);font-size:9px;font-weight:800;white-space:nowrap}
+.lc-result-card .lc-paid{color:var(--warning);font-size:9px;font-weight:900;white-space:nowrap}
+.lc-result-card .lc-owner{color:var(--accent);font-size:8px;font-weight:900;white-space:nowrap}
+.lc-result-card .lc-out{color:#ffb0b0;font-size:8px;font-weight:900;white-space:nowrap}
+@media (min-width:601px) and (max-width:1024px){
+  .lc-table-mode .app{width:calc(100% - 12px);padding-top:10px}
+  .lc-table-mode header{margin-bottom:10px;gap:10px}.lc-table-mode .brand .subtitle{display:none}
+  .lc-table-mode .top-actions .btn{padding:9px 10px;font-size:12px}.lc-table-mode .tabs{margin-bottom:10px}
+  .lc-table-mode .table-view .panel-head{padding:10px 12px}.lc-table-mode .table-view .panel-head h2{font-size:15px}.lc-table-mode .table-view .panel-head p{margin-top:3px;font-size:10px;line-height:1.3}
+  .la-cuenta-table-wrap{max-height:calc(100vh - 190px)}
+  .la-cuenta-history-table .lc-account-head,.la-cuenta-history-table .lc-account-cell{width:68px;min-width:68px;max-width:68px}
+  .la-cuenta-history-table .lc-detail-head,.la-cuenta-history-table .lc-detail-cell{left:68px;width:162px;min-width:162px;max-width:162px}
+  .la-cuenta-history-table .lc-player-head,.la-cuenta-history-table .lc-player-cell{width:112px;min-width:112px;max-width:112px}
+  .lc-result-card .lc-money{font-size:13px}.lc-result-card .lc-hand,.lc-result-card .lc-paid{font-size:8px}.lc-result-card .lc-owner,.lc-result-card .lc-out{font-size:7px}
+}
+@media(max-width:600px){
+  .la-cuenta-table-wrap{max-height:calc(100vh - 200px)}
+  .la-cuenta-history-table .lc-account-head,.la-cuenta-history-table .lc-account-cell{width:62px;min-width:62px;max-width:62px}
+  .la-cuenta-history-table .lc-detail-head,.la-cuenta-history-table .lc-detail-cell{left:62px;width:142px;min-width:142px;max-width:142px}
+  .la-cuenta-history-table .lc-player-head,.la-cuenta-history-table .lc-player-cell{width:102px;min-width:102px;max-width:102px}
+}
+
 @media (display-mode: standalone){.app{padding-bottom:calc(46px + env(safe-area-inset-bottom))}}
 </style>
 </head>
@@ -165,7 +211,7 @@ body{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bot
 </div>
 
 <div id="tableView" class="tab-view table-view">
-<section class="panel"><div class="panel-head"><h2>Tabla completa de resultados</h2><p>Vista completa de los 20 cuadraditos: pronóstico arriba a la izquierda, bazas reales arriba a la derecha y tanteo acumulado en grande. Las rondas de oros quedan resaltadas.</p></div><div class="panel-body"><div id="cuadHistoryList"></div></div></section>
+<section class="panel"><div class="panel-head"><h2 id="tableViewTitle">Tabla completa de resultados</h2><p id="tableViewDescription">Vista completa de los 20 cuadraditos: pronóstico arriba a la izquierda, bazas reales arriba a la derecha y tanteo acumulado en grande. Las rondas de oros quedan resaltadas.</p></div><div class="panel-body"><div id="cuadHistoryList"></div><div id="laCuentaHistoryList" class="hidden"></div></div></section>
 </div>
 </section>
 </main>
@@ -187,12 +233,12 @@ const CUAD_SEQUENCE=[1,2,3,4,5,6,7,8,9,10,10,9,8,7,6,5,4,3,2,1];
 const defaults={chinchon:{players:[],rounds:[],limit:100,eliminationMode:'gte',reentryEnabled:true},kharma:{players:[],rounds:[],limit:75},cuadraditos:{players:[],rounds:[],initialDealerId:null},lacuenta:{players:[],rounds:[]}};
 let appState=loadAppState(),selectedGame=null,cuadEditingIndex=null;
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-const els={selector:$('#gameSelector'),app:$('#gameApp'),playerName:$('#playerName'),addPlayer:$('#addPlayerBtn'),players:$('#players'),scoreBody:$('#scoreBody'),roundEntry:$('#roundEntry'),history:$('#historyList'),cuadHistory:$('#cuadHistoryList'),limit:$('#limitInput'),mode:$('#modeSelect'),reentry:$('#reentryEnabled'),initialDealer:$('#initialDealer'),toast:$('#toast'),gameView:$('#gameView'),configView:$('#configView'),tableView:$('#tableView'),saveRound:$('#saveRoundBtn'),gameOver:$('#gameOverBox'),resetModal:$('#resetModal'),resetModalText:$('#resetModalText'),confirmReset:$('#confirmResetBtn'),cancelReset:$('#cancelResetBtn')};
+const els={selector:$('#gameSelector'),app:$('#gameApp'),playerName:$('#playerName'),addPlayer:$('#addPlayerBtn'),players:$('#players'),scoreBody:$('#scoreBody'),roundEntry:$('#roundEntry'),history:$('#historyList'),cuadHistory:$('#cuadHistoryList'),laCuentaHistory:$('#laCuentaHistoryList'),limit:$('#limitInput'),mode:$('#modeSelect'),reentry:$('#reentryEnabled'),initialDealer:$('#initialDealer'),toast:$('#toast'),gameView:$('#gameView'),configView:$('#configView'),tableView:$('#tableView'),saveRound:$('#saveRoundBtn'),gameOver:$('#gameOverBox'),resetModal:$('#resetModal'),resetModalText:$('#resetModalText'),confirmReset:$('#confirmResetBtn'),cancelReset:$('#cancelResetBtn')};
 function clone(v){return JSON.parse(JSON.stringify(v))}function uid(){return crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(16).slice(2)}function escapeHtml(v){return String(v).replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]))}
 function loadAppState(){let next={games:{}};try{const raw=JSON.parse(localStorage.getItem(STORAGE_KEY));if(raw?.games)next=raw}catch{};for(const k of Object.keys(defaults))if(!next.games[k])next.games[k]=clone(defaults[k]);try{const legacy=JSON.parse(localStorage.getItem(LEGACY_KEY));if(legacy?.players&&legacy?.rounds&&!next.games.chinchon.players.length)next.games.chinchon={...clone(defaults.chinchon),...legacy}}catch{};if(typeof next.games.chinchon.reentryEnabled!=='boolean')next.games.chinchon.reentryEnabled=true;return next}
 function saveApp(){localStorage.setItem(STORAGE_KEY,JSON.stringify(appState))}function state(){return appState.games[selectedGame]}function showToast(m){els.toast.textContent=m;els.toast.classList.add('show');clearTimeout(showToast.t);showToast.t=setTimeout(()=>els.toast.classList.remove('show'),2800)}
-function setTab(tab){if(tab==='table'&&selectedGame!=='cuadraditos')tab='game';els.gameView.classList.toggle('active',tab==='game');els.configView.classList.toggle('active',tab==='config');els.tableView.classList.toggle('active',tab==='table');document.body.classList.toggle('cuad-table-mode',tab==='table'&&selectedGame==='cuadraditos');$$('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab))}
-function chooseGame(game){selectedGame=game;cuadEditingIndex=null;els.selector.classList.add('hidden');els.app.classList.remove('hidden');setTab('game');render()}function showSelector(){selectedGame=null;cuadEditingIndex=null;document.body.classList.remove('cuad-table-mode');els.app.classList.add('hidden');els.selector.classList.remove('hidden')}
+function setTab(tab){if(tab==='table'&&!['cuadraditos','lacuenta'].includes(selectedGame))tab='game';els.gameView.classList.toggle('active',tab==='game');els.configView.classList.toggle('active',tab==='config');els.tableView.classList.toggle('active',tab==='table');document.body.classList.toggle('cuad-table-mode',tab==='table'&&selectedGame==='cuadraditos');document.body.classList.toggle('lc-table-mode',tab==='table'&&selectedGame==='lacuenta');$$('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab))}
+function chooseGame(game){selectedGame=game;cuadEditingIndex=null;els.selector.classList.add('hidden');els.app.classList.remove('hidden');setTab('game');render()}function showSelector(){selectedGame=null;cuadEditingIndex=null;document.body.classList.remove('cuad-table-mode','lc-table-mode');els.app.classList.add('hidden');els.selector.classList.remove('hidden')}
 
 /* Chinchón */
 function reachesChinchonLimit(total){const s=state();return s.eliminationMode==='gte'?total>=s.limit:total>s.limit}
@@ -368,9 +414,12 @@ function renderHeader(){
   const locked=(cu||lc)&&s.rounds.length>0,maxed=(cu&&s.players.length>=CUAD_PLAYERS)||(lc&&s.players.length>=LA_CUENTA_MAX_PLAYERS);
   $('#playerLockText').classList.toggle('hidden',!locked);if(locked)$('#playerLockText').textContent='Con la partida iniciada los jugadores quedan bloqueados. Pulsa Nueva partida para modificarlos.';
   els.playerName.disabled=locked||maxed;els.addPlayer.disabled=locked||maxed;
-  $('#primaryTabBtn').textContent=cu?'Pronósticos':'Puntuaciones';$('#tableTabBtn').classList.toggle('hidden',!cu);
+  $('#primaryTabBtn').textContent=cu?'Pronósticos':'Puntuaciones';$('#tableTabBtn').classList.toggle('hidden',!(cu||lc));$('#tableTabBtn').textContent=lc?'Marcador completo':'Tabla completa';
   $('#mainPanelTitle').textContent=cu?'Pronósticos, puntuación y clasificación':lc?'Ahorros y cuentas':'Puntuaciones y clasificación';
-  $('#mainPanelBody').classList.toggle('cuad-main-body',cu);$('#mainHistory').classList.toggle('hidden',cu);
+  $('#mainPanelBody').classList.toggle('cuad-main-body',cu);$('#mainHistory').classList.toggle('hidden',cu||lc);
+  $('#tableViewTitle').textContent=lc?'Marcador completo de La Cuenta':'Tabla completa de resultados';
+  $('#tableViewDescription').textContent=lc?'Historial completo de cuentas, pagos, manos y ahorros. Desliza horizontalmente para consultar todos los jugadores; las dos primeras columnas permanecen fijas.':'Vista completa de los 20 cuadraditos: pronóstico arriba a la izquierda, bazas reales arriba a la derecha y tanteo acumulado en grande. Las rondas de oros quedan resaltadas.';
+  els.cuadHistory.classList.toggle('hidden',!cu);els.laCuentaHistory.classList.toggle('hidden',!lc);
   $('#rankingDescription').textContent=cu?'Primero completa la ronda actual. Debajo tienes el resumen de tanteos y la clasificación; gana quien más puntos acumule.':lc?'Cada jugador empieza con 5 cartas y el dueño de una cuenta suma 1 carta para la ronda siguiente. Quien llega a 0 € queda eliminado. La partida continúa hasta quedar 3 jugadores activos; entonces gana quien conserve más ahorros.':'El jugador con menos puntos ocupa la primera posición.';
   $('#playersStatLabel').textContent=(ch||lc)?'Jugadores activos':'Jugadores';$('#roundStatLabel').textContent=lc?'Cuentas':'Ronda';$('#leaderStatLabel').textContent=lc?'Más ahorros':'Líder';
   $('#roundEntryTitle').textContent=cu?(cuadEditingIndex!==null?'Editar ronda':cuadPendingRound()?'Anotar resultado de la ronda':'Pronósticos de la ronda'):lc?'Registrar una cuenta':'Añadir ronda';
@@ -444,9 +493,20 @@ function saveRound(){
 }
 function deleteRound(id){const s=state(),idx=s.rounds.findIndex(r=>r.id===id);if(idx<0)return;const msg=selectedGame==='cuadraditos'&&idx!==s.rounds.length-1?'Al borrar esta ronda también se borrarán las rondas posteriores para mantener el orden 1→10→1. ¿Continuar?':selectedGame==='lacuenta'?'¿Borrar esta cuenta? Los ahorros se recalcularán automáticamente.':'¿Borrar esta ronda?';if(!confirm(msg))return;if(selectedGame==='cuadraditos'){s.rounds=s.rounds.slice(0,idx);cuadEditingIndex=null}else s.rounds=s.rounds.filter(r=>r.id!==id);saveApp();render()}
 function renderLaCuentaHistory(){
-  const s=state();els.history.innerHTML='';if(!s.rounds.length){els.history.innerHTML='<div class="empty" style="margin-top:10px">Aún no hay cuentas registradas.</div>';return}
-  const tl=laCuentaTimeline(),wrap=document.createElement('div');wrap.className='round-ranking-wrap';const table=document.createElement('table');table.className='round-ranking-table';table.innerHTML=`<thead><tr><th>Cuenta</th><th class="player-col">Cuenta / pago</th>${s.players.map(p=>`<th class="player-col">${escapeHtml(p.name)}</th>`).join('')}<th></th></tr></thead>`;const body=document.createElement('tbody');
-  s.rounds.forEach((round,i)=>{const snap=tl.snapshots[i],prevSnap=i>0?tl.snapshots[i-1]:null,payments=laCuentaRoundPayments(round),payerIds=Object.keys(payments),payers=payerIds.map(id=>s.players.find(p=>p.id===id)).filter(Boolean),ownerId=laCuentaRoundOwnerId(round),owner=s.players.find(p=>p.id===ownerId),cards=laCuentaCardsForRound(i),tr=document.createElement('tr'),date=new Date(round.createdAt).toLocaleString('es-ES',{dateStyle:'short',timeStyle:'short'}),reason=round.reason==='voluntary'?'Voluntaria':'Obligada',cells=s.players.map(p=>{const total=snap?.totals?.[p.id]??laCuentaInitialSavings(s.players.length),share=payments[p.id]||0,paid=share>0,out=!!snap?.eliminated?.[p.id],wasOut=!!prevSnap?.eliminated?.[p.id],newOut=(snap?.newlyEliminatedIds||[]).includes(p.id),isOwner=p.id===ownerId;return`<td class="player-col ${paid?'payer-cell':''} ${isOwner?'la-cuenta-owner-cell':''}"><span class="rank-player ${out?'rank-out':''}"><span class="rank-points money">${formatMoney(total)}</span>${!wasOut?`<span class="hand-history-note">mano: ${cards[p.id]} cartas</span>`:'<span class="hand-history-note">sin mano</span>'}${paid?`<span class="payer-detail">−${formatMoney(share)}</span>`:''}${isOwner?'<span class="owner-history-note">dueño · +1 siguiente</span>':''}${newOut?'<span class="bill-history-note">eliminado aquí</span>':out?'<span class="bill-history-note">eliminado</span>':''}</span></td>`}).join(''),payerNames=payers.map(p=>escapeHtml(p.name)).join(' + ')||'—',outNames=(snap?.newlyEliminatedIds||[]).map(id=>s.players.find(p=>p.id===id)?.name).filter(Boolean);tr.innerHTML=`<td class="round-label"><strong>Cuenta ${i+1}</strong><span>${date}</span></td><td class="player-col"><strong>Dueño: ${escapeHtml(owner?.name||'—')}</strong><span class="bill-history-note">${laCuentaPaymentLabel(payerIds.length)} · ${formatMoney(round.amount)} · ${reason}</span><span class="bill-history-note">Pagan: ${payerNames}${outNames.length?` · eliminado${outNames.length>1?'s':''}: ${escapeHtml(outNames.join(' / '))}`:''}</span></td>${cells}<td><button class="icon-btn" title="Eliminar cuenta">×</button></td>`;tr.querySelector('button').onclick=()=>deleteRound(round.id);body.appendChild(tr)});table.appendChild(body);wrap.appendChild(table);els.history.appendChild(wrap);
+  const s=state();els.laCuentaHistory.innerHTML='';
+  if(!s.rounds.length){els.laCuentaHistory.innerHTML='<div class="empty" style="margin:12px">Aún no hay cuentas registradas.</div>';return}
+  const tl=laCuentaTimeline(),wrap=document.createElement('div');wrap.className='la-cuenta-table-wrap';
+  const table=document.createElement('table');table.className='la-cuenta-history-table';
+  table.innerHTML=`<thead><tr><th class="lc-account-head">Cuenta</th><th class="lc-detail-head">Detalle</th>${s.players.map(p=>`<th class="lc-player-head">${escapeHtml(p.name)}</th>`).join('')}</tr></thead>`;
+  const body=document.createElement('tbody');
+  s.rounds.forEach((round,i)=>{
+    const snap=tl.snapshots[i],prevSnap=i>0?tl.snapshots[i-1]:null,payments=laCuentaRoundPayments(round),payerIds=Object.keys(payments),payers=payerIds.map(id=>s.players.find(p=>p.id===id)).filter(Boolean),ownerId=laCuentaRoundOwnerId(round),owner=s.players.find(p=>p.id===ownerId),cards=laCuentaCardsForRound(i),tr=document.createElement('tr'),date=new Date(round.createdAt).toLocaleString('es-ES',{dateStyle:'short',timeStyle:'short'}),reason=round.reason==='voluntary'?'Voluntaria':'Obligada';
+    const cells=s.players.map(p=>{const total=snap?.totals?.[p.id]??laCuentaInitialSavings(s.players.length),share=payments[p.id]||0,paid=share>0,out=!!snap?.eliminated?.[p.id],wasOut=!!prevSnap?.eliminated?.[p.id],newOut=(snap?.newlyEliminatedIds||[]).includes(p.id),isOwner=p.id===ownerId;return`<td class="lc-player-cell ${paid?'payer-cell':''} ${isOwner?'la-cuenta-owner-cell':''}"><div class="lc-result-card ${out?'out':''}"><span class="lc-money money">${formatMoney(total)}</span>${!wasOut?`<span class="lc-hand">${cards[p.id]} cartas</span>`:'<span class="lc-hand">sin mano</span>'}${paid?`<span class="lc-paid">−${formatMoney(share)}</span>`:''}${isOwner?'<span class="lc-owner">dueño · +1</span>':''}${newOut?'<span class="lc-out">eliminado aquí</span>':out?'<span class="lc-out">eliminado</span>':''}</div></td>`}).join('');
+    const payerNames=payers.map(p=>escapeHtml(p.name)).join(' + ')||'—',outNames=(snap?.newlyEliminatedIds||[]).map(id=>s.players.find(p=>p.id===id)?.name).filter(Boolean);
+    tr.innerHTML=`<td class="lc-account-cell"><div class="lc-account-box"><strong>#${i+1}</strong><span>${date}</span></div></td><td class="lc-detail-cell"><div class="lc-detail-box"><strong>${escapeHtml(owner?.name||'—')} · ${formatMoney(round.amount)}</strong><span>${laCuentaPaymentLabel(payerIds.length)} · ${reason}</span><span>Pagan: ${payerNames}</span>${outNames.length?`<span>Eliminado${outNames.length>1?'s':''}: ${escapeHtml(outNames.join(' / '))}</span>`:''}<button class="lc-delete-btn" type="button">Borrar</button></div></td>${cells}`;
+    tr.querySelector('.lc-delete-btn').onclick=()=>deleteRound(round.id);body.appendChild(tr)
+  });
+  table.appendChild(body);wrap.appendChild(table);els.laCuentaHistory.appendChild(wrap);
 }
 function renderHistory(){
   if(selectedGame==='cuadraditos')return renderCuadHistory();if(selectedGame==='lacuenta')return renderLaCuentaHistory();

@@ -43,3 +43,7 @@ No hace falta comando de build. `netlify.toml` publica la raíz del repositorio.
 ## Datos
 
 Las partidas se guardan en el almacenamiento local del navegador/dispositivo. No se envían a GitHub ni a Netlify.
+
+
+## Versión v10
+La Cuenta incorpora una pestaña independiente de Marcador completo con tabla responsive optimizada para iPad y sin solapamientos.
