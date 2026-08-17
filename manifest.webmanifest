@@ -1,7 +1,7 @@
 {
   "name": "Marcador de Juegos de Mesa",
   "short_name": "Marcador Juegos",
-  "description": "Marcador para Chinchón, Kharma, Los Cuadraditos y La Cuenta.",
+  "description": "Marcador para Chinchón, Kharma, Los Cuadraditos y La Cuenta, con control de puntuaciones, ahorros y manos.",
   "lang": "es",
   "start_url": "./",
   "scope": "./",
