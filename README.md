@@ -47,3 +47,8 @@ Las partidas se guardan en el almacenamiento local del navegador/dispositivo. No
 
 ## Versión v10
 La Cuenta incorpora una pestaña independiente de Marcador completo con tabla responsive optimizada para iPad y sin solapamientos.
+
+
+## Novedad v11
+
+En **La Cuenta**, la pestaña **Marcador completo** incluye ahora **Revertir pago** en cada cuenta. Al confirmar, esa cuenta se elimina y se recalculan automáticamente los ahorros, las eliminaciones y el número de cartas de todas las rondas posteriores. Después puedes registrar de nuevo la cuenta con el importe correcto.
