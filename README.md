@@ -46,3 +46,7 @@ Las partidas se guardan en el almacenamiento local del navegador/dispositivo. No
 - En **Los Cuadraditos** se conserva también el repartidor inicial.
 - La confirmación usa ahora una ventana propia de la aplicación para funcionar de forma fiable en iPad/PWA.
 - Incrementada la caché offline a `v3`.
+
+
+## Versión v4
+La tabla completa de Los Cuadraditos se ha optimizado para iPad de 6.ª generación (9,7 pulgadas), en vertical y horizontal. Incluye celdas compactas, cabeceras fijas, columna de cartas fija y columna de acciones fija.
